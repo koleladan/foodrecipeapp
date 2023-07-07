@@ -1,4 +1,4 @@
-package com.compose.foodrecipeapp.ui.theme
+package com.compose.foodrecipeapp.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
