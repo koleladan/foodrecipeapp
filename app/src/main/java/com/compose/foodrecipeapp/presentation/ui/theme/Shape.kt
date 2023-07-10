@@ -1,4 +1,4 @@
-package com.compose.foodrecipeapp.ui.theme
+package com.compose.foodrecipeapp.presentation.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
