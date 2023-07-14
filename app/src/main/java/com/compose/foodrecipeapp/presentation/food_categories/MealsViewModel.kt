@@ -6,6 +6,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.compose.foodrecipeapp.core.Resource
+import com.compose.foodrecipeapp.core.util.Constants
 import com.compose.foodrecipeapp.domain.usecases.get_meals.GetMealsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
@@ -22,7 +23,9 @@ class MealsViewModel @Inject constructor(
     val state: State<MealsState> get() = _state
 
     init {
-
+        savedStateHandle.get<String>(Constants.query)?.let { query ->
+            getMeals(query)
+        }
     }
 
     private fun getMeals(query: String) {
